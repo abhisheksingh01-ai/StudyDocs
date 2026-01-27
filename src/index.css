@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* --- LIGHT THEME (Warm Stone) --- */
+    --bg-main: #FAFAF9;       /* Stone-50 */
+    --bg-card: #FFFFFF;       /* White */
+    --text-main: #292524;     /* Stone-800 */
+    --text-muted: #78716c;    /* Stone-500 */
+    --border: #E7E5E4;        /* Stone-200 */
+    --primary: #C2410C;       /* Orange-700 */
+    --primary-fg: #FFFFFF;
+    
+    /* Hero Gradient Colors */
+    --gradient-start: #FFF7ED; /* Orange-50 */
+    --gradient-mid: #FFEDD5;   /* Orange-100 */
+    --gradient-end: #FAFAF9;   /* Stone-50 */
+    
+    --font-serif: 'Domine', serif;
+    --font-sans: 'Inter', sans-serif;
+  }
+
+  /* --- DARK THEME (Obsidian) --- */
+  .dark {
+    --bg-main: #0C0A09;       /* Stone-950 */
+    --bg-card: #1C1917;       /* Stone-900 */
+    --text-main: #FAFAF9;     /* Stone-50 */
+    --text-muted: #A8A29E;    /* Stone-400 */
+    --border: #292524;        /* Stone-800 */
+    --primary: #EA580C;       /* Orange-600 */
+    
+    /* Dark Hero Gradient (Subtle warm glow on black) */
+    --gradient-start: #1c1917; 
+    --gradient-mid: #292524;
+    --gradient-end: #0C0A09;
+  }
+
+  /* --- NAVY THEME (Deep Sea) --- */
+  .navy {
+    --bg-main: #020617;       /* Slate-950 */
+    --bg-card: #0F172A;       /* Slate-900 */
+    --text-main: #F8FAFC;     /* Slate-50 */
+    --text-muted: #94A3B8;    /* Slate-400 */
+    --border: #1E293B;        /* Slate-800 */
+    --primary: #38BDF8;       /* Sky-400 */
+    
+    /* Navy Hero Gradient (Blue glow) */
+    --gradient-start: #0f172a;
+    --gradient-mid: #1e293b;
+    --gradient-end: #020617;
+  }
+  
+  html { -webkit-font-smoothing: antialiased; }
+  
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    color: var(--text-main);
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer utilities {
+  .section-spacing { @apply py-16 lg:py-24; }
+  
+  /* Dynamic Utilities */
+  .bg-theme-main { background-color: var(--bg-main); }
+  .bg-theme-card { background-color: var(--bg-card); }
+  .text-theme-main { color: var(--text-main); }
+  .text-theme-muted { color: var(--text-muted); }
+  .border-theme { border-color: var(--border); }
+  .bg-primary { background-color: var(--primary); color: var(--primary-fg); }
+  .text-primary { color: var(--primary); }
+  
+  /* The Magic Gradient Class */
+  .bg-hero-gradient {
+    background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+  }
+}
