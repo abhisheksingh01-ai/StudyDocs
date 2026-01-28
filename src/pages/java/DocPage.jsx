@@ -1,8 +1,6 @@
-// src/pages/DocPage.jsx
-import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-import { sidebarNavigation, docsContent } from "../../data/java/docsData"; // Import Data
+import { sidebarNavigation, docsContent } from "../../data/java/docsData"; 
 import { ChevronRight, BookOpen } from "lucide-react";
 
 export default function DocPage() {
@@ -30,7 +28,7 @@ export default function DocPage() {
     <div className="min-h-screen bg-[#0c0a09] text-stone-200 font-sans selection:bg-orange-500/30 selection:text-orange-200">
       <Navbar />
 
-      <div className="max-w-[1440px] mx-auto pt-24 px-6 flex gap-12">
+      <div className="max-w-360 mx-auto pt-24 px-6 flex gap-12">
         
         {/* ================= LEFT SIDEBAR (Navigation) ================= */}
         <aside className="hidden lg:block w-64 shrink-0 fixed top-24 bottom-0 overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-stone-800">

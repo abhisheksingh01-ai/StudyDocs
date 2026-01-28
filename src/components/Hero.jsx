@@ -15,11 +15,6 @@ export default function Hero() {
         
         {/* Left: Content */}
         <div className="text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-orange-400 text-xs font-medium mb-6 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-            v2.0 is now live
-          </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
             Coding docs for <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-red-500 font-serif italic pr-2">

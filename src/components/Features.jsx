@@ -57,9 +57,6 @@ export default function Features() {
         
         {/* Header */}
         <div className="mb-16 md:text-center max-w-2xl mx-auto">
-          <span className="text-orange-500 font-bold tracking-widest text-xs uppercase mb-3 block">
-            Workflow
-          </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-serif">
             Engineered for focus.
           </h2>

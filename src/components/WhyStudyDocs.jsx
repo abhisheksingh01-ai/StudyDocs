@@ -32,9 +32,6 @@ export default function WhyStudyDocs() {
           
           {/* Left Column: The Manifesto */}
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider mb-6">
-              Our Philosophy
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight font-serif">
               Why we built this.
             </h2>

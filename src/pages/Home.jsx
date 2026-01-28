@@ -38,9 +38,6 @@ export default function Home() {
             {/* Section Header */}
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
               <div className="max-w-2xl">
-                <span className="text-orange-500 font-bold tracking-widest text-xs uppercase mb-3 block">
-                  Curriculum
-                </span>
                 <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
                   Master Modern Engineering.
                 </h2>
