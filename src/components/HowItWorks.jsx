@@ -1,59 +1,81 @@
 import React from "react";
-import { FileCode, Terminal, BookOpen, Award } from "lucide-react";
+import { Terminal, BookOpen, Code2, Award } from "lucide-react";
 
 export default function HowItWorks() {
   const steps = [
     { 
       num: "01", 
       title: "Choose Track", 
-      desc: "Java, JS, or Systems.",
-      icon: <Terminal className="w-4 h-4" />
+      desc: "Select your path: Backend, Frontend, or DevOps.",
+      icon: Terminal 
     },
     { 
       num: "02", 
       title: "Read Guide", 
-      desc: "Clear, text-based lessons.",
-      icon: <BookOpen className="w-4 h-4" />
+      desc: "Deep-dive into text-based, interactive lessons.",
+      icon: BookOpen 
     },
     { 
       num: "03", 
       title: "Build Project", 
-      desc: "Apply what you learned.",
-      icon: <FileCode className="w-4 h-4" />
+      desc: "Apply knowledge by compiling real code.",
+      icon: Code2 
     },
     { 
       num: "04", 
       title: "Get Hired", 
-      desc: "Ace the technical interview.",
-      icon: <Award className="w-4 h-4" />
+      desc: "Master the patterns used in technical interviews.",
+      icon: Award 
     },
   ];
 
   return (
-    <section className="section-spacing bg-[#FAFAF9] border-t border-stone-200">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <span className="text-[#C2410C] text-[11px] font-bold uppercase tracking-wider mb-2 block">Process</span>
-          <h2 className="text-3xl font-bold text-stone-900">The Path to Mastery</h2>
+    <section className="py-24 bg-[#0c0a09] relative">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <span className="text-orange-500 text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+            Process
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-white font-serif">
+            The Path to Mastery
+          </h2>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6 relative">
-          {/* Connector Line */}
-          <div className="hidden md:block absolute top-6 left-0 w-full h-0.5 bg-stone-200 -z-10"></div>
+        <div className="grid md:grid-cols-4 gap-8 relative">
+          
+          {/* Decorative Connector Line (Desktop Only) */}
+          <div className="hidden md:block absolute top-8 left-0 w-full h-px bg-linear-to-r from-transparent via-stone-800 to-transparent z-0"></div>
 
           {steps.map((step, i) => (
-            <div key={i} className="relative bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:shadow-md transition-shadow">
-               <div className="w-12 h-12 bg-[#FAFAF9] border border-stone-200 rounded-full flex items-center justify-center text-[#C2410C] font-bold mb-4 mx-auto md:mx-0">
-                  {step.icon}
-               </div>
-               <h3 className="text-base font-bold text-stone-900 mb-1 font-serif">{step.title}</h3>
-               <p className="text-xs text-stone-500">{step.desc}</p>
-               <span className="absolute top-4 right-4 text-[40px] font-serif font-bold text-stone-100 -z-1 pointer-events-none select-none">
+            <div key={i} className="relative z-10 group">
+              
+              {/* Card Container */}
+              <div className="bg-[#1c1917] p-8 rounded-2xl border border-white/5 hover:border-orange-500/30 transition-all duration-300 h-full relative overflow-hidden">
+                
+                {/* Large Background Number */}
+                <span className="absolute -right-4 -top-6 text-[100px] font-bold text-white/3 select-none pointer-events-none group-hover:text-orange-500/5 transition-colors font-serif">
                   {step.num}
-               </span>
+                </span>
+
+                {/* Icon Circle */}
+                <div className="w-16 h-16 bg-[#0c0a09] border border-white/10 rounded-full flex items-center justify-center text-white mb-6 shadow-xl shadow-black/50 group-hover:scale-110 group-hover:border-orange-500/50 transition-all duration-300 mx-auto md:mx-0">
+                  <step.icon className="w-6 h-6 group-hover:text-orange-500 transition-colors" />
+                </div>
+
+                {/* Text Content */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-500 transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-stone-400 leading-relaxed">
+                  {step.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
+        
       </div>
     </section>
   );
